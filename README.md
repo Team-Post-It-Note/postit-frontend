@@ -126,3 +126,63 @@ Who merges PRs? everyone that has something to merge
 How often will you merge? 1- 2 times daily
 
 How will you communicate that it’s time to merge? It will be a set time 5pm
+
+
+# User Stories
+
+- As a User, i would like to have the ability to search for a destination and find events in the area so i can quickly find something to do when i visit that destination.
+
+- As a User, i would like to Save events and into my profile page so that i can refer to them at a later date.
+
+- As a Beer Enthusiast, i would like to have the ability to search for various brewerys within a given destination so that i can try new beer!
+
+- Being a Beer enthusiast, i would like to save all of my favorite brewerys so that i can tell my friends about them.
+
+- Moving to a new location is hard. As a user who is moving, i would like to be able to search for different social events so that i can meet some of the locals who's interests match my own.
+## Vision
+**What is the vision of this product?**
+
+- Our product is designed to help people in a social media world unplug from their online lives and go out into the real world to enjoy events and brewerys
+
+**What pain point does this project solve?**
+
+- After a global pandemic has pleagued our planet for the past year, people may need to be reminded about how life was socially.  Some may need to find out for the first time!
+
+- During this Massive heat wave, there has never been more of a demand for beer enthusiasts to quench their thirst!
+
+**Why should we care about your product?**
+
+- Because we bring user's the ability to connect socially after over a year of online and no contact separation, bringing people together at last.
+
+## Scope (In/Out)
+#### IN - What will our product do?
+
+- Authenticate our users by using Auth0 as our Oauth service.
+- Authenticated users can search a location and recieve input with a wide variety of events and brewerys based on search query.
+- Save our Authenticated users selected brewerys and events to perisit in a profile.
+- Allow the ability to add and remove various persisting data in an authenticated users profile.
+- Allows users to "like" various events and brewerys.
+
+
+#### OUT - What will your product not do.
+These should be features that you will make very clear from the beginning that you will not do during development. These should be limited and very few. Pick your battles wisely. This should only be 1 or 2 things. Example: My website will never turn into an IOS or Android app.
+
+## Minimum Viable Product vs Stretch Goals
+
+- Auth0 login user; form to search locationIQ, use location name to gather various brewery's and events in the given location. Allows users to save favorite events and brewery's with the ability to view all saved items, post new save items and remove any unwanted saved items.
+
+#### Stretch
+- filter events by type of meet-up(dropdown selection)
+- Use a fourth API to give random facts about the searched location.(tourism stuff, covid rates, etc)
+
+
+## Data Flow
+
+
+
+## Non-Functional Requirements (301 & 401 only)
+
+***Security - Using Auth0 as a secure login provider***
+***Usability-  Targeting beer enthusiasts as well as all event loving people, the brewery search targets the brew lover niche sepecifically.***
+
+Pick 2 non-functional requirements and describe their functionality in your application.
