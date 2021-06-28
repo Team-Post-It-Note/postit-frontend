@@ -175,6 +175,19 @@ These should be features that you will make very clear from the beginning that y
 - filter events by type of meet-up(dropdown selection)
 - Use a fourth API to give random facts about the searched location.(tourism stuff, covid rates, etc)
 
+## Wireframes
+Login
+![Login](./public/images/login-wireframe-post-project.jpeg)
+
+Profile
+![Profile](./public/images/profile-wireframe-post-project.jpeg)
+
+Search
+![Search](./public/images/search-wireframe-post-project.jpeg)
+
+About
+![About](./public/images/about-wireframe-post-project.jpeg)
+
 
 ## Data Flow
 
