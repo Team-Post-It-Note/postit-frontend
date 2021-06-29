@@ -1,12 +1,14 @@
 import axios from 'axios';
 import Breweries from './Breweries.js';
+import Events from './Events';
+import { Jumbotron } from 'react-bootstrap';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
 
-const server = process.env.REACT_APP_SERVER;
+const server = process.env.REACT_APP_SERVER || 3001;
 
 class SearchPage extends React.Component {
 
@@ -52,9 +54,14 @@ class SearchPage extends React.Component {
               </Form>
           </Card.Body>
         </Card>
-        <Breweries
-          breweries = {this.state.breweries}
-        />
+        <Jumbotron>
+          <Breweries
+            breweries = {this.state.breweries}
+          />
+          <Events 
+
+          />
+        </Jumbotron>
       </>
     );
   }

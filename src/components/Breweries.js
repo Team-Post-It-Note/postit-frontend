@@ -1,6 +1,7 @@
 import { withAuth0 } from '@auth0/auth0-react';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 import React from 'react';
 
@@ -10,7 +11,11 @@ class Breweries extends React.Component {
     
     return(
       <>
-        {this.props.breweries ? this.props.breweries.map(brewery => {
+        
+        {this.props.breweries ?
+        <Jumbotron>
+          <h1>Local Breweries</h1>
+        {this.props.breweries.map(brewery => {
           return (
           <Card>
             <Card.Text>{brewery.name}</Card.Text>
@@ -19,7 +24,7 @@ class Breweries extends React.Component {
             <Card.Text>Phone: {brewery.phone}</Card.Text>
             <Button>Add to favorites</Button>
           </Card>
-        )}) : ''}
+        )})} </Jumbotron>: ''}
       </>
     )
   }
