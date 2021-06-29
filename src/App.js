@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LandingJumbo from './LandingJumbo.js';
-import Loading from './Loading.js';
-import About from './About.js';
-import LoginButton from './LoginButton.js';
-import Header from './Header.js';
-import Footer from './Footer.js';
-import SearchPage from './SearchPage.js';
-import Profile from './Profile.js';
+import LandingJumbo from './components/LandingJumbo.js';
+import Loading from './components/Loading.js';
+import About from './components/About.js';
+import LoginButton from './components/LoginButton.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import SearchPage from './components/SearchPage.js';
+import Profile from './components/Profile.js';
 import { withAuth0 } from '@auth0/auth0-react';
 
 class App extends React.Component {
