@@ -9,6 +9,7 @@ import Footer from './components/Footer.js';
 import SearchPage from './components/SearchPage.js';
 import Profile from './components/Profile.js';
 import { withAuth0 } from '@auth0/auth0-react';
+import './App.css';
 
 class App extends React.Component {
   render() {

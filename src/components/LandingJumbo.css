@@ -1,0 +1,13 @@
+div.carousel{
+  background-color:#dbe9e5;
+
+}
+div.jumbotron{
+  background-color:#dbe9e5;
+  text-align: center;
+}
+img{
+  border-radius: 8px;
+  margin: auto; 
+  max-height: 50%;
+}
