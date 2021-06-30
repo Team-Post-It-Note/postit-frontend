@@ -7,7 +7,7 @@ import './Footer.css';
 class Footer extends React.Component {
   render() {
     return(
-      <Navbar collapseOnSelect expand="lg" variant="light">
+      <Navbar collapseOnSelect expand="lg" variant="light" fixed="bottom">
         <Navbar.Brand>&copy; </Navbar.Brand>
         <Link to="/about" style={{ align : 'center'}}>About</Link>
       </Navbar>

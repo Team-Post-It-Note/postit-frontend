@@ -1,3 +1,13 @@
-.navBar{
-  background-color: #1b7b7a;
+#navHeader{
+  display: flex;
+  flex-direction: row;
+}
+
+#navHeader * {
+  margin-left: 5%;
+}
+
+#app-logo{
+  font-family: 'Suez One', serif;
+  color: rgb(194, 255, 255);
 }
