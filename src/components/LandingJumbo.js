@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import './LandingJumbo.css';
 
 class LandingJumbo extends React.Component {
