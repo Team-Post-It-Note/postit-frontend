@@ -8,7 +8,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
 
-const server =`http://localhost:3001` || process.env.REACT_APP_SERVER;
+const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class SearchPage extends React.Component {
 

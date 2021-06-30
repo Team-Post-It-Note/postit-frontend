@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import axios from 'axios';
 import React from 'react';
-const server =`http://localhost:3001` || process.env.REACT_APP_SERVER;
+const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class Breweries extends React.Component {
   constructor (props){
