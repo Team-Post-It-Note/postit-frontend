@@ -33,6 +33,15 @@ class Breweries extends React.Component {
     this.setState({ breweryArray: breweryArray.data })
   }
 
+  deleteBrewery = async (id) => {
+    let config = await this.getConfig();
+    let response = await axios.delete(`${server}/breweries/${id}`, config);
+    console.log(response);
+    let updatedArray = this.state.breweryArray.filter(brewery => brewery._id !== id);
+    this.setState({ breweryArray: updatedArray });
+    console.log(this.state.breweryArray)
+  }
+
   render() {
 
     return (
@@ -53,7 +62,7 @@ class Breweries extends React.Component {
                       <Card.Text>Address: {brewery.street}</Card.Text>
                       <Card.Text>Website: {brewery.website_url}</Card.Text>
                       <Card.Text>Phone: {brewery.phone}</Card.Text>
-                      <Button>Remove from favorites</Button>
+                      <Button variant="danger" onClick={() => this.deleteBrewery(brewery._id)}>Remove</Button>
                     </Card.Footer>
                   )
                 })}

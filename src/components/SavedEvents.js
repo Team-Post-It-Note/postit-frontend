@@ -30,6 +30,13 @@ class Events extends React.Component {
     console.log(eventArray.data);
     this.setState({ eventArray: eventArray.data })
   }
+  deleteEvent = async (id) => {
+    let config = await this.getConfig();
+    let response = await axios.delete(`${server}tickets/${id}`, config);
+    console.log(response);
+    let updatedArray = this.state.eventArray.filter(event => event._id !== id);
+    this.setState({ eventArray: updatedArray });
+  }
 
 
   render() {
@@ -52,7 +59,7 @@ class Events extends React.Component {
                     <Card.Text>Venue: {event.venue}</Card.Text>
                     <Card.Text>Start Date: {event.startDate}</Card.Text>
                     <Card.Text>Start Time: {event.startTime}</Card.Text>
-                    <Button>Remove from favorites</Button>
+                    <Button variant="danger" onClick={() => this.deleteEvent(event._id)}>Remove</Button>
                   </Card.Footer>
                 )
               })}
