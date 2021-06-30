@@ -8,7 +8,7 @@ class Events extends React.Component {
   constructor (props){
     super(props);
     this.state = {
-      allEvents:[]
+      eventArray:[]
     };
   };
   
@@ -28,7 +28,14 @@ class Events extends React.Component {
     let config = await this.getConfig();
     let eventArray = await axios.get(`${server}/tickets`, config);
     console.log(eventArray.data);
-    this.setState({ allEvents: eventArray.data })
+    this.setState({ eventArray: eventArray.data })
+  }
+  deleteEvent = async (id) => {
+    let config = await this.getConfig();
+    let response = await axios.delete(`${server}tickets/${id}`, config);
+    console.log(response);
+    let updatedArray = this.state.eventArray.filter(event => event._id !== id);
+    this.setState({ eventArray: updatedArray });
   }
 
 
@@ -45,14 +52,14 @@ class Events extends React.Component {
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body>
-              {this.state.allEvents.map(event => {
+              {this.state.eventArray.map(event => {
                 return (
                   <Card.Footer>
                     <Card.Text>{event.name}</Card.Text>
                     <Card.Text>Venue: {event.venue}</Card.Text>
                     <Card.Text>Start Date: {event.startDate}</Card.Text>
                     <Card.Text>Start Time: {event.startTime}</Card.Text>
-                    <Button>Remove from favorites</Button>
+                    <Button variant="danger" onClick={() => this.deleteEvent(event._id)}>Remove</Button>
                   </Card.Footer>
                 )
               })}
