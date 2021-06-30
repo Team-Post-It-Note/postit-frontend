@@ -1,5 +1,5 @@
 import { withAuth0 } from '@auth0/auth0-react';
-import Butnpmton from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import axios from 'axios';
