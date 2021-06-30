@@ -39,14 +39,13 @@ class SearchPage extends React.Component {
   eventSearch = async (e) => {
     let eventQuery = await axios.get(`${server}/ticketsapi?city=${e.target.location.value}&date=${e.target.date.value}`);
     console.log(eventQuery);
-    const event = eventQuery;
-    // const event = eventQuery.sort(function(a,b){
-    //   return a.startDate - b.startDate;
-    // });
-    console.log(event.data);
+    const event = eventQuery.data.sort(function(a,b){
+      return a.startDate > b.startDate ? 1 : -1
+    });
+    console.log(event);
 
     this.setState({
-      events: event.data,
+      events: event,
     })
   }
 
