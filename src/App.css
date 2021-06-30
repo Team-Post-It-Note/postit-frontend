@@ -2,6 +2,7 @@
 body{
   background-image: url(/src/images/cuteTown.jpg);
   background-size: 100%;
+  background-position: top;
   background-repeat: no-repeat;
   color: #184d5f;
 }
