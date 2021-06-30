@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingJumbo from './components/LandingJumbo.js';
 import Loading from './components/Loading.js';
 import About from './components/About.js';
-import LoginButton from './components/LoginButton.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import SearchPage from './components/SearchPage.js';
@@ -21,7 +20,6 @@ class App extends React.Component {
           <Loading>
             <Header class="header"/>
             {isAuthenticated ? '' : <LandingJumbo />}
-            {isAuthenticated ? '' : <LoginButton/>}
             <Switch>
               <Route exact path="/">
                 {isAuthenticated ? <SearchPage /> : ''}
