@@ -2,7 +2,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import {Accordion, Card, Button} from 'react-bootstrap';
 import axios from 'axios';
-const server =`http://localhost:3001` || process.env.REACT_APP_SERVER;
+const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class Events extends React.Component {
   constructor (props){
