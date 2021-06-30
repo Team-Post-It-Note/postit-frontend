@@ -8,7 +8,7 @@ class Events extends React.Component {
   constructor (props){
     super(props);
     this.state = {
-      allEvents:[]
+      eventArray:[]
     };
   };
   
@@ -28,7 +28,7 @@ class Events extends React.Component {
     let config = await this.getConfig();
     let eventArray = await axios.get(`${server}/tickets`, config);
     console.log(eventArray.data);
-    this.setState({ allEvents: eventArray.data })
+    this.setState({ eventArray: eventArray.data })
   }
 
 
@@ -45,7 +45,7 @@ class Events extends React.Component {
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body>
-              {this.state.allEvents.map(event => {
+              {this.state.eventArray.map(event => {
                 return (
                   <Card.Footer>
                     <Card.Text>{event.name}</Card.Text>
