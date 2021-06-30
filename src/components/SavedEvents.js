@@ -32,7 +32,7 @@ class Events extends React.Component {
   }
   deleteEvent = async (id) => {
     let config = await this.getConfig();
-    let response = await axios.delete(`${server}tickets/${id}`, config);
+    let response = await axios.delete(`${server}/tickets/${id}`, config);
     console.log(response);
     let updatedArray = this.state.eventArray.filter(event => event._id !== id);
     this.setState({ eventArray: updatedArray });
