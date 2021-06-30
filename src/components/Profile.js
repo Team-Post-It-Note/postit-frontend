@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 import SavedBreweries from './SavedBreweries.js';
 import SavedEvents from './SavedEvents.js';
+import SavedRestaurants from './SavedRestaurants.js';
 
 import {Card, Jumbotron} from 'react-bootstrap';
 
@@ -23,6 +24,7 @@ class Profile extends React.Component {
         <Jumbotron>
           <SavedBreweries/>
           <SavedEvents/>
+          <SavedRestaurants/>
         </Jumbotron>
       </>
     )
