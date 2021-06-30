@@ -37,14 +37,16 @@ class SearchPage extends React.Component {
     })
   }
   eventSearch = async (e) => {
-    let eventQuery = await axios.get(`${server}/ticketsapi?city=${e.target.location.value}`);
+    let eventQuery = await axios.get(`${server}/ticketsapi?city=${e.target.location.value}&date=${e.target.date.value}`);
     console.log(eventQuery);
     const event = eventQuery;
+    // const event = eventQuery.sort(function(a,b){
+    //   return a.startDate - b.startDate;
+    // });
     console.log(event.data);
 
     this.setState({
       events: event.data,
-      
     })
   }
 
@@ -104,6 +106,10 @@ class SearchPage extends React.Component {
                 <Form.Group controlId="location">
                   <Form.Label>Search by Location</Form.Label>
                   <Form.Control type="string" placeholder="Enter Location Here!" />
+                </Form.Group>
+                <Form.Group controlId="date">
+                <Form.Label>Select Date</Form.Label>
+                  <Form.Control type="date" name="date" />
                 </Form.Group>
               <Button variant="primary" type="submit">Find Stuff</Button>
               </Form>
