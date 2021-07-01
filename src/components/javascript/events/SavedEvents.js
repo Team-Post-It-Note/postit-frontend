@@ -64,6 +64,7 @@ class Events extends React.Component {
                     <Card.Text>Venue: {event.venue}</Card.Text>
                     <Card.Text>Start Date: {event.startDate}</Card.Text>
                     <Card.Text>Start Time: {event.startTime}</Card.Text>
+                    <Card.Text>Website: {event.url}</Card.Text>
                     <Button variant="light" onClick={() => this.deleteEvent(event._id)}>Remove</Button>
                   </Card.Footer>
                 )

@@ -9,7 +9,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import {Card, Form, Button} from 'react-bootstrap';
 import Restaurants from './restaurants/Restaurants.js';
 
-const server =process.env.REACT_APP_SERVER || `http://localhost:3001`;
+const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class SearchPage extends React.Component {
 
@@ -110,12 +110,10 @@ class SearchPage extends React.Component {
     console.log(this.state.newBreweries);
   };
   addRests = async (rest) => {
-
     let config = await this.getConfig();
     const responseData = await axios.post(`${server}/rests`, rest, config);
     let addedRest = this.state.newRests
     addedRest.push(responseData.data);
-    console.log(responseData.data);
     this.setState({ newRests: addedRest});
     console.log(this.state.newRests);
   };
