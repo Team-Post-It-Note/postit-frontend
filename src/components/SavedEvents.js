@@ -1,7 +1,8 @@
-import { withAuth0 } from '@auth0/auth0-react';
-import React from 'react';
-import {Accordion, Card, Button} from 'react-bootstrap';
 import axios from 'axios';
+import React from 'react';
+import './SavedEvents.css';
+import {Accordion, Card, Button} from 'react-bootstrap';
+import { withAuth0 } from '@auth0/auth0-react';
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class Events extends React.Component {
@@ -44,8 +45,12 @@ class Events extends React.Component {
       <>
       
           <Accordion>
-          <Card>
-            <Card.Header>
+          <Card
+            className="savedEventCard"
+          >
+            <Card.Header
+              id="savedEventHeader"
+            >
               <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <h1>Your Saved Events</h1>
               </Accordion.Toggle>
@@ -59,7 +64,7 @@ class Events extends React.Component {
                     <Card.Text>Venue: {event.venue}</Card.Text>
                     <Card.Text>Start Date: {event.startDate}</Card.Text>
                     <Card.Text>Start Time: {event.startTime}</Card.Text>
-                    <Button variant="danger" onClick={() => this.deleteEvent(event._id)}>Remove</Button>
+                    <Button variant="light" onClick={() => this.deleteEvent(event._id)}>Remove</Button>
                   </Card.Footer>
                 )
               })}

@@ -1,9 +1,11 @@
-import { withAuth0 } from '@auth0/auth0-react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import React from 'react';
+import './SavedBreweries.css';
+import { withAuth0 } from '@auth0/auth0-react';
+
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class Breweries extends React.Component {
@@ -47,9 +49,17 @@ class Breweries extends React.Component {
     return (
       <>
           <Accordion>
-            <Card>
-              <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            <Card
+              className="savedBreweryCard"
+            >
+              <Card.Header
+                id="savedBreweryHeader"
+              >
+                <Accordion.Toggle 
+                  as={Button} 
+                  variant="link" 
+                  eventKey="0"
+                >
                   <h1>Your Saved Breweries</h1>
                 </Accordion.Toggle>
               </Card.Header>
@@ -62,7 +72,7 @@ class Breweries extends React.Component {
                       <Card.Text>Address: {brewery.street}</Card.Text>
                       <Card.Text>Website: {brewery.website_url}</Card.Text>
                       <Card.Text>Phone: {brewery.phone}</Card.Text>
-                      <Button variant="danger" onClick={() => this.deleteBrewery(brewery._id)}>Remove</Button>
+                      <Button variant="light" onClick={() => this.deleteBrewery(brewery._id)}>Remove</Button>
                     </Card.Footer>
                   )
                 })}
