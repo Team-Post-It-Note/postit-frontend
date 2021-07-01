@@ -7,8 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
+import Restaurants from './Restaurants.js';
 
-const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
+const server =process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class SearchPage extends React.Component {
 
@@ -18,8 +19,10 @@ class SearchPage extends React.Component {
     this.state = {
       breweries: [],
       events: [],
+      rests: [],
       newEvents: [],
-      newBreweries:[]
+      newBreweries:[],
+      newRests: [],
     }
   }
 
@@ -46,6 +49,20 @@ class SearchPage extends React.Component {
 
     this.setState({
       events: event,
+    })
+  }
+  restSearch = async (e) => {
+    let restQuery = await axios.get(`${server}/restsapi?city=${e.target.location.value}`);
+    console.log(restQuery);
+    const rest = restQuery.data.sort(function(a,b){
+      return a.rating > b.rating ? 1 : -1
+    });
+    // const rest = restQuery;
+    console.log(rest.data);
+
+    this.setState({
+      rests: rest.data,
+      
     })
   }
 
@@ -91,6 +108,15 @@ class SearchPage extends React.Component {
     this.setState({ newBreweries: addedBrewery});
     console.log(this.state.newBreweries);
   };
+  addRests = async (rest) => {
+
+    let config = await this.getConfig();
+    const responseData = await axios.post(`${server}/rests`, rest, config);
+    let addedRest = this.state.newRests
+    addedRest.push(responseData.data);
+    this.setState({ newRests: addedRest});
+    console.log(this.state.newRests);
+  };
 
 
 
@@ -123,6 +149,8 @@ class SearchPage extends React.Component {
           <Events onClick={this.addEvents}
             events = {this.state.events}
           />
+          <Restaurants onClick={this.addRests}
+            rests = {this.state.rests}/>
         </Jumbotron>
         : ''}
       </>

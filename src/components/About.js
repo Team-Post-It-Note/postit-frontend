@@ -1,4 +1,5 @@
 import { withAuth0 } from '@auth0/auth0-react';
+import './About.css';
 import DeveloperProfiles from './DeveloperProfiles.js';
 import { Jumbotron } from 'react-bootstrap';
 import React from 'react';
@@ -9,7 +10,7 @@ class About extends React.Component {
     return(
       <>
         <Jumbotron>
-          <h1>Meet the Team!</h1>
+          <h1 id="meet-team">Meet the Team!</h1>
           <DeveloperProfiles
 
           />
