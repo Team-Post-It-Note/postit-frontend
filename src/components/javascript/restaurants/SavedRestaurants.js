@@ -5,7 +5,7 @@ import axios from 'axios';
 import '../../css/SavedRestaurants.css';
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
-class Events extends React.Component {
+class Restaurants extends React.Component {
   constructor (props){
     super(props);
     this.state = {
@@ -61,9 +61,10 @@ class Events extends React.Component {
                 return (
                   <Card.Footer>
                     <Card.Text>{rest.name}</Card.Text>
-                    <Card.Text>Venue: {rest.venue}</Card.Text>
-                    <Card.Text>Start Date: {rest.startDate}</Card.Text>
-                    <Card.Text>Start Time: {rest.startTime}</Card.Text>
+                    <Card.Text>Address: {rest.location}</Card.Text>
+                    <Card.Text>Rating: {rest.rating}</Card.Text>
+                    <Card.Text>Phone: {rest.phone}</Card.Text>
+                    <Card.Text>Website: {rest.url}</Card.Text>
                     <Button variant="danger" onClick={() => this.deleteRest(rest._id)}>Remove</Button>
                   </Card.Footer>
                 )
@@ -78,4 +79,4 @@ class Events extends React.Component {
   }
 }
 
-export default withAuth0(Events);
+export default withAuth0(Restaurants);
