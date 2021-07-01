@@ -1,13 +1,13 @@
 import axios from 'axios';
-import Breweries from './Breweries.js';
-import Events from './Events';
+import Breweries from './breweries/Breweries.js';
+import Events from './events/Events';
 import { Jumbotron } from 'react-bootstrap';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
-import Restaurants from './Restaurants.js';
+import Restaurants from './restaurants/Restaurants.js';
 
 const server =process.env.REACT_APP_SERVER || `http://localhost:3001`;
 

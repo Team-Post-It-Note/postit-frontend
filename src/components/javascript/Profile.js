@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import './Profile.css';
-import SavedBreweries from './SavedBreweries.js';
-import SavedEvents from './SavedEvents.js';
-import SavedRestaurants from './SavedRestaurants.js';
+import '../css/Profile.css';
+import SavedBreweries from './breweries/SavedBreweries.js';
+import SavedEvents from './events/SavedEvents.js';
+import SavedRestaurants from './restaurants/SavedRestaurants.js';
 
 import {Card, Jumbotron} from 'react-bootstrap';
 
