@@ -70,7 +70,7 @@ class Breweries extends React.Component {
                     <Card.Footer>
                       <Card.Text>{brewery.name}</Card.Text>
                       <Card.Text>Address: {brewery.street}</Card.Text>
-                      <Card.Text>Website: {brewery.website_url}</Card.Text>
+                      <Card.Text><a href={brewery.website_url}>Click to View Website</a></Card.Text>
                       <Card.Text>Phone: {brewery.phone}</Card.Text>
                       <Button variant="light" onClick={() => this.deleteBrewery(brewery._id)}>Remove</Button>
                     </Card.Footer>
