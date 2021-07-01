@@ -1,15 +1,15 @@
-.savedEventCard {
+.restaurantCard {
   color: rgb(24, 31, 31);
   background-color: rgba(255, 255, 255, 0.8);
   font-family: 'Suez One', serif;
 }
 
-#savedEventHeader * {
+#restaurantHeader * {
   color: beige;
   letter-spacing: 0.1em;
   font-family: 'Suez One', serif;
 }
 
-#savedEventHeader {
+#restaurantHeader {
   background-color: rgba(36, 107, 201, 0.8);
 }

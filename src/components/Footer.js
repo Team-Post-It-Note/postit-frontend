@@ -9,7 +9,7 @@ class Footer extends React.Component {
     return(
       <Navbar collapseOnSelect expand="lg" variant="light" fixed="bottom">
         <Navbar.Brand>&copy; </Navbar.Brand>
-        <Link to="/about" style={{ align : 'center'}}>About</Link>
+        <Link to="/about" style={{ align : 'center'}} className="footerLinks">About</Link>
       </Navbar>
     );
   }

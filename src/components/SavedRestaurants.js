@@ -2,6 +2,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import {Accordion, Card, Button} from 'react-bootstrap';
 import axios from 'axios';
+import './SavedRestaurants.css';
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class Events extends React.Component {
@@ -44,8 +45,12 @@ class Events extends React.Component {
       <>
       
           <Accordion>
-          <Card>
-            <Card.Header>
+          <Card
+            className="savedRestCard"
+          >
+            <Card.Header
+              id="savedRestHeader"
+            >
               <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <h1>Your Saved Restaurants</h1>
               </Accordion.Toggle>
