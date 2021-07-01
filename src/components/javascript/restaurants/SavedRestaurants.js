@@ -63,8 +63,8 @@ class Restaurants extends React.Component {
                     <Card.Text>{rest.name}</Card.Text>
                     <Card.Text>Address: {rest.location}</Card.Text>
                     <Card.Text>Rating: {rest.rating}</Card.Text>
+                    <Card.Text><a href={rest.url}>Click to View Website</a></Card.Text>
                     <Card.Text>Phone: {rest.phone}</Card.Text>
-                    <Card.Text>Website: {rest.url}</Card.Text>
                     <Button variant="danger" onClick={() => this.deleteRest(rest._id)}>Remove</Button>
                   </Card.Footer>
                 )
