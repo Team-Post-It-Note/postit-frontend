@@ -1,5 +1,5 @@
 import { withAuth0 } from '@auth0/auth0-react';
-import '../../css/Events.css'
+import '../../css/accordionCards.css';
 import React from 'react';
 import {Accordion, Card, Button} from 'react-bootstrap';
 
@@ -10,10 +10,10 @@ class Events extends React.Component {
       {this.props.events ?
           <Accordion>
           <Card
-            classname="eventCard"
+            className="accordionCard"
           >
             <Card.Header
-              id="eventHeader"
+              className="accordionHeader"
             >
               <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <h1>Local Events</h1>
