@@ -52,16 +52,16 @@ class SearchPage extends React.Component {
     })
   }
   restSearch = async (e) => {
-    let restQuery = await axios.get(`${server}/restsapi?city=${e.target.location.value}`);
+    let restQuery = await axios.get(`${server}/restsapi?location=${e.target.location.value}`);
     console.log(restQuery);
     const rest = restQuery.data.sort(function(a,b){
       return a.rating > b.rating ? 1 : -1
     });
     // const rest = restQuery;
-    console.log(rest.data);
+    console.log(rest);
 
     this.setState({
-      rests: rest.data,
+      rests: rest,
       
     })
   }
@@ -71,6 +71,7 @@ class SearchPage extends React.Component {
     try {
       this.brewerySearch(e);
       this.eventSearch(e);
+      this.restSearch(e);
     } catch (err) {
       console.log(err);
     }
@@ -114,6 +115,7 @@ class SearchPage extends React.Component {
     const responseData = await axios.post(`${server}/rests`, rest, config);
     let addedRest = this.state.newRests
     addedRest.push(responseData.data);
+    console.log(responseData.data);
     this.setState({ newRests: addedRest});
     console.log(this.state.newRests);
   };

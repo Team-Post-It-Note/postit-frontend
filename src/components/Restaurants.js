@@ -20,9 +20,10 @@ class Restaurants extends React.Component {
                 return (
                   <Card.Footer>
                     <Card.Text>{rest.name}</Card.Text>
-                    <Card.Text>Address: {rest.address}</Card.Text>
+                    <Card.Text>Address: {rest.location}</Card.Text>
                     <Card.Text>Rating: {rest.rating}</Card.Text>
                     <Card.Text>URL: {rest.url}</Card.Text>
+                    <Card.Text>Phone: {rest.phone}</Card.Text>
                     <Button onClick={() => this.props.onClick(rest)}>Add to favorites</Button>
                   </Card.Footer>
                 )
