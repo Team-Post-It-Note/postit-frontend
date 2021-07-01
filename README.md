@@ -3,21 +3,50 @@
 ### Team POST
 - **Miriam Silva**
 - **Joshua Haddock**
-- **Anthony Johnson**
 - **Patrick Laurion**
 
-### Version: 0.0.0
+### Version: 1.1.1
 
 ## Overview
 
-This app allows the user to search a potential city they want to travel to and date(s) they will be ther . Upon searching they will be shown events collected from various APIs about shows, meetups etc.
+This app allows the user to search a potential city they want to travel to and date(s) they will be there . Upon searching they will be shown event, restaurant, and local brewery data gathered from Ticketmaster, Yelp, and BreweryDB.
 
 ## Getting Started
+A deployed version of our site can be found [here](https://where2gonow.xyz/).
+
 
 ## Architecture
-Site was desiged using React and React-Bootstrap on the frontend and node on the server side. The site is divided into various components and modules per standard industry practices.
+Site was desiged using React and React-Bootstrap on the frontend and node.js for backend. The frontend application is broken down into multiple components for each working part of the page, as per industry standards. While bootstrap is incorprated, any additional styling is done on a seperate css file that is accessed from a seperate folder.
+
+The API is similarly broken up into models and modules.
 
 ## Credit and Collaborations
+
+This project was worked on equally amongst the three developers.
+Michelle Ferreirae aided in consultation and debugging.
+
+### APIs
+
+[Brewery DB](https://www.brewerydb.com/)
+
+[Yelp](https://www.yelp.com/developers)
+
+[Ticketmaster](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)
+
+
+
+### Image Attributions
+
+[Football vector created by pikisuperstar - www.freepik.com](https://www.freepik.com/free-photos-vectors/football)
+
+[Restaurant vector created by macrovector - www.freepik.com](https://www.freepik.com/free-photos-vectors/restaurant)
+
+[Background vector created by vectorpocket - www.freepik.com](https://www.freepik.com/free-photos-vectors/background)
+
+[Banner vector created by macrovector - www.freepik.com](https://www.freepik.com/free-photos-vectors/banner)
+
+[Design vector created by macrovector - www.freepik.com](https://www.freepik.com/free-photos-vectors/design)
+
 
 ## Collaborative Agreement
 
