@@ -57,7 +57,7 @@ class DeveloperProfiles extends React.Component {
                   <Card.Title>Joshua Haddock</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                   <Card.Text>
-                    BIO
+                  Developer | Writer | Video game enthusiast. Former hospitality professional with an English BA and passion for creating.
                   </Card.Text>
                   <Card.Link href="https://www.linkedin.com/in/joshuahaddock/">LinkedIn</Card.Link>
                   <Card.Link href="https://github.com/joshhaddock88">Github</Card.Link>
