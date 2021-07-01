@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LandingJumbo from './components/LandingJumbo.js';
-import Loading from './components/Loading.js';
-import About from './components/About.js';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
-import SearchPage from './components/SearchPage.js';
-import Profile from './components/Profile.js';
+import LandingJumbo from './components/javascript/LandingJumbo.js';
+import Loading from './components/javascript/Loading.js';
+import About from './components/javascript/about/About.js';
+import Header from './components/javascript/header-footer/Header.js';
+import Footer from './components/javascript/header-footer/Footer.js';
+import SearchPage from './components/javascript/SearchPage.js';
+import Profile from './components/javascript/Profile.js';
 import { withAuth0 } from '@auth0/auth0-react';
 import './App.css';
 

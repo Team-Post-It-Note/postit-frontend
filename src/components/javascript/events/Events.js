@@ -1,5 +1,5 @@
 import { withAuth0 } from '@auth0/auth0-react';
-import './Events.css'
+import '../../css/Events.css'
 import React from 'react';
 import {Accordion, Card, Button} from 'react-bootstrap';
 

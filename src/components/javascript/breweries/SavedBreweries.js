@@ -3,7 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React from 'react';
-import './SavedBreweries.css';
+import '../../css/SavedBreweries.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;

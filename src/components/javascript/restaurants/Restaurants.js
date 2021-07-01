@@ -1,6 +1,6 @@
 import { withAuth0 } from '@auth0/auth0-react';
 import React from 'react';
-import './Restaurants.css';
+import '../../css/Restaurants.css';
 import {Accordion, Card, Button} from 'react-bootstrap';
 
 class Restaurants extends React.Component {

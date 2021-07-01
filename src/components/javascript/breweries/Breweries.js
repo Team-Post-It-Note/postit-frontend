@@ -1,6 +1,6 @@
 import { withAuth0 } from '@auth0/auth0-react';
 import Button from 'react-bootstrap/Button';
-import './Breweries.css';
+import '../../css/Breweries.css';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 
