@@ -3,7 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React from 'react';
-import '../../css/SavedBreweries.css';
+import '../../css/accordionCards.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
@@ -50,10 +50,10 @@ class Breweries extends React.Component {
       <>
           <Accordion>
             <Card
-              className="savedBreweryCard"
+              className="accordionCard"
             >
               <Card.Header
-                id="savedBreweryHeader"
+                className="accordionHeader"
               >
                 <Accordion.Toggle 
                   as={Button} 
