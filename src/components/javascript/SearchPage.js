@@ -1,15 +1,15 @@
 import axios from 'axios';
-import Breweries from './Breweries.js';
-import Events from './Events';
+import Breweries from './breweries/Breweries.js';
+import Events from './events/Events';
 import { Jumbotron } from 'react-bootstrap';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
-import Restaurants from './Restaurants.js';
+import Restaurants from './restaurants/Restaurants.js';
 
-const server =process.env.REACT_APP_SERVER || `http://localhost:3001`;
+const server = process.env.REACT_APP_SERVER || `http://localhost:3001`;
 
 class SearchPage extends React.Component {
 
@@ -52,16 +52,16 @@ class SearchPage extends React.Component {
     })
   }
   restSearch = async (e) => {
-    let restQuery = await axios.get(`${server}/restsapi?city=${e.target.location.value}`);
+    let restQuery = await axios.get(`${server}/restsapi?location=${e.target.location.value}`);
     console.log(restQuery);
     const rest = restQuery.data.sort(function(a,b){
       return a.rating > b.rating ? 1 : -1
     });
     // const rest = restQuery;
-    console.log(rest.data);
+    console.log(rest);
 
     this.setState({
-      rests: rest.data,
+      rests: rest,
       
     })
   }
@@ -71,6 +71,7 @@ class SearchPage extends React.Component {
     try {
       this.brewerySearch(e);
       this.eventSearch(e);
+      this.restSearch(e);
     } catch (err) {
       console.log(err);
     }
@@ -109,7 +110,6 @@ class SearchPage extends React.Component {
     console.log(this.state.newBreweries);
   };
   addRests = async (rest) => {
-
     let config = await this.getConfig();
     const responseData = await axios.post(`${server}/rests`, rest, config);
     let addedRest = this.state.newRests

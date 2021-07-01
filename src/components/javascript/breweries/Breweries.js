@@ -1,5 +1,6 @@
 import { withAuth0 } from '@auth0/auth0-react';
 import Button from 'react-bootstrap/Button';
+import '../../css/Breweries.css';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 
@@ -14,8 +15,12 @@ class Breweries extends React.Component {
 
         {this.props.breweries ?
           <Accordion>
-            <Card>
-              <Card.Header>
+            <Card
+              className="breweryCard"
+            >
+              <Card.Header
+                id="breweryHeader"
+              >
                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
                   <h1>Local Breweries</h1>
                 </Accordion.Toggle>
@@ -27,7 +32,7 @@ class Breweries extends React.Component {
                     <Card.Footer>
                       <Card.Text>{brewery.name}</Card.Text>
                       <Card.Text>Address: {brewery.street}</Card.Text>
-                      <Card.Text>Website: {brewery.website_url}</Card.Text>
+                      <Card.Text><a href={brewery.website_url}>Click to View Website</a></Card.Text>
                       <Card.Text>Phone: {brewery.phone}</Card.Text>
                       <Button onClick={() => this.props.onClick(brewery)}>Add to favorites</Button>
                     </Card.Footer>

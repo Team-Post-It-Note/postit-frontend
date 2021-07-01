@@ -1,7 +1,7 @@
 import { withAuth0 } from '@auth0/auth0-react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import './DeveloperProfiles.css';
+import '../../css/DeveloperProfiles.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React from 'react';

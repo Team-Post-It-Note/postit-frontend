@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LoginButton from './LoginButton.js';
 import LogoutButton from './LogoutButton.js';
 import { withAuth0 } from '@auth0/auth0-react';
-import './Header.css';
+import '../../css/Header.css';
 
 class Header extends React.Component {
   render() {
@@ -16,8 +16,8 @@ class Header extends React.Component {
           ? <LogoutButton />
           : <LoginButton />
         }
-        <Link to="/">Search</Link>
-        {this.props.auth0.isAuthenticated?<Link to="/profile">Profile</Link>:''}
+        <Link to="/" className="headerLinks">Search</Link>
+        {this.props.auth0.isAuthenticated?<Link to="/profile" className="headerLinks">Profile</Link>:''}
       </Navbar>
     );
   }
