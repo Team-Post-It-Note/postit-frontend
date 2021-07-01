@@ -1,5 +1,6 @@
 import { withAuth0 } from '@auth0/auth0-react';
 import React from 'react';
+import './Restaurants.css';
 import {Accordion, Card, Button} from 'react-bootstrap';
 
 class Restaurants extends React.Component {
@@ -8,8 +9,12 @@ class Restaurants extends React.Component {
       <>
       {this.props.rests ?
           <Accordion>
-          <Card>
-            <Card.Header>
+          <Card
+            className="restaurantCard"
+          >
+            <Card.Header
+              id="restaurantHeader"
+            >
               <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <h1>Local Restaurants</h1>
               </Accordion.Toggle>
