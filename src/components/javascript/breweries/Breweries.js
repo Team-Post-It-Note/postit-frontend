@@ -8,13 +8,6 @@ import React from 'react';
 
 class Breweries extends React.Component {
 
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     buttonColor: []
-  //   }
-  // }
-
   render() {
 
     return (
