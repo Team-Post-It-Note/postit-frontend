@@ -5,4 +5,6 @@
 .footerLinks {
   font-family: 'Manuela', sans-serif;
   font-size: 1.25em;
+  color: rgb(255, 177, 9);
+  font-weight: bold;
 }
