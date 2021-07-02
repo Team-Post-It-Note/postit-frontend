@@ -8,11 +8,17 @@ import React from 'react';
 
 class Breweries extends React.Component {
 
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //     buttonColor: []
+  //   }
+  // }
+
   render() {
 
     return (
       <>
-
         {this.props.breweries ?
           <Accordion>
             <Card
@@ -27,7 +33,7 @@ class Breweries extends React.Component {
               </Card.Header>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                {this.props.breweries.map(brewery => {
+                {this.props.breweries.map((brewery) => {
                   return (
                     <Card.Footer>
                       <Card.Text>{brewery.name}</Card.Text>
