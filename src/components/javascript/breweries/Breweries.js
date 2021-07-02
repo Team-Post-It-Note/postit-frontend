@@ -12,7 +12,6 @@ class Breweries extends React.Component {
 
     return (
       <>
-
         {this.props.breweries ?
           <Accordion>
             <Card
@@ -27,7 +26,7 @@ class Breweries extends React.Component {
               </Card.Header>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                {this.props.breweries.map(brewery => {
+                {this.props.breweries.map((brewery) => {
                   return (
                     <Card.Footer>
                       <Card.Text>{brewery.name}</Card.Text>

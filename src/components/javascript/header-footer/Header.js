@@ -16,7 +16,10 @@ class Header extends React.Component {
           ? <LogoutButton />
           : <LoginButton />
         }
-        <Link to="/" className="headerLinks">Search</Link>
+        {this.props.auth0.isAuthenticated
+          ? <Link to="/" className="headerLinks">Search</Link>
+          : ''
+        }
         {this.props.auth0.isAuthenticated?<Link to="/profile" className="headerLinks">Profile</Link>:''}
       </Navbar>
     );
