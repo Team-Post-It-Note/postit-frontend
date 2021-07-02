@@ -55,7 +55,7 @@ class SearchPage extends React.Component {
     let restQuery = await axios.get(`${server}/restsapi?location=${e.target.location.value}`);
     console.log(restQuery);
     const rest = restQuery.data.sort(function(a,b){
-      return a.rating > b.rating ? 1 : -1
+      return a.rating < b.rating ? 1 : -1
     });
     // const rest = restQuery;
     console.log(rest);
