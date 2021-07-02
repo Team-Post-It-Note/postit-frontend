@@ -23,7 +23,7 @@ class DeveloperProfiles extends React.Component {
                   <Card.Title>Miriam Silva</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                   <Card.Text>
-                    BIO
+                    Software Developer  with an affinity for writing code, reading and taking pictures of her cats
                   </Card.Text>
                   <Card.Link href="http://linkedin.com/in/mirmsilva">LinkedIn</Card.Link>
                   <Card.Link href="https://github.com/mirmsilva">Github</Card.Link>
@@ -40,7 +40,7 @@ class DeveloperProfiles extends React.Component {
                   <Card.Title>Patrick Laurion</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                   <Card.Text>
-                    BIO
+                    Trucker turned Software Developer US Navy Veteran and Proud Father Recently Developed taste for Learning 
                   </Card.Text>
                   <Card.Link href="https://www.linkedin.com/in/patricklaurion1989/">LinkedIn</Card.Link>
                   <Card.Link href="https://github.com/plaurion1989">Github</Card.Link>
@@ -57,7 +57,7 @@ class DeveloperProfiles extends React.Component {
                   <Card.Title>Joshua Haddock</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                   <Card.Text>
-                  Developer | Writer | Video game enthusiast. Former hospitality professional with an English BA and passion for creating.
+                    Developer | Writer | Video game enthusiast. Former hospitality professional with an English BA and passion for creating.
                   </Card.Text>
                   <Card.Link href="https://www.linkedin.com/in/joshuahaddock/">LinkedIn</Card.Link>
                   <Card.Link href="https://github.com/joshhaddock88">Github</Card.Link>

@@ -1,4 +1,4 @@
-# Post It
+# Where 2 Go Now
 
 ### Team POST
 - **Miriam Silva**
@@ -13,12 +13,28 @@ This app allows the user to search a potential city they want to travel to and d
 
 ## Getting Started
 A deployed version of our site can be found [here](https://where2gonow.xyz/).
+To run natively
+- Clone this repo to your machine.
+- Clone our [api.](https://github.com/Team-Post-It-Note/postIt-api)
+- check package.json in both repositories to make sure all dependencies are installed.
+- get keys from 
+
+  * [Yelp](https://www.yelp.com/developers)
+
+  * [Ticketmaster](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)
+
+- Create a .env file in your api and match keys to variables defined in
+  * restHandler.js line 4
+  * ticketHandler.js line 4.
+  * (note: breweryDB does not require a key)
+
+Once dependencies are installed and keys are acquired and placed inside .env with their corresponding variable name, run npm start on the api, then npm start on the React App and the sight should run. React will run on localhost:3000 and the server will run on localhost:3001.
 
 
 ## Architecture
 Site was desiged using React and React-Bootstrap on the frontend and node.js for backend. The frontend application is broken down into multiple components for each working part of the page, as per industry standards. While bootstrap is incorprated, any additional styling is done on a seperate css file that is accessed from a seperate folder.
 
-The API is similarly broken up into models and modules.
+Our server is similarly broken up into models and modules.
 
 ## Credit and Collaborations
 
