@@ -90,10 +90,8 @@ class SearchPage extends React.Component {
   }
 
   // ----------------Add Happens Here--------------
-
-
+  
   addEvents = async (event) => {
-
     let config = await this.getConfig();
     const responseData = await axios.post(`${server}/tickets`, event, config);
     let addedEvent = this.state.newEvents
@@ -101,6 +99,7 @@ class SearchPage extends React.Component {
     this.setState({ newEvents: addedEvent});
     console.log(this.state.newEvents);
   };
+
   addBreweries = async (brewery) => {
     let config = await this.getConfig();
     const responseData = await axios.post(`${server}/breweries`, brewery, config);
@@ -109,6 +108,7 @@ class SearchPage extends React.Component {
     this.setState({ newBreweries: addedBrewery});
     console.log(this.state.newBreweries);
   };
+
   addRests = async (rest) => {
     let config = await this.getConfig();
     const responseData = await axios.post(`${server}/rests`, rest, config);
@@ -117,6 +117,7 @@ class SearchPage extends React.Component {
     this.setState({ newRests: addedRest});
     console.log(this.state.newRests);
   };
+
 
 
 

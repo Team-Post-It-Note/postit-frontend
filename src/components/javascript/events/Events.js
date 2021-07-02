@@ -28,7 +28,9 @@ class Events extends React.Component {
                     <Card.Text>Venue: {event.venue}</Card.Text>
                     <Card.Text>Start Date: {event.startDate}</Card.Text>
                     <Card.Text>Start Time: {event.startTime}</Card.Text>
-                    <Card.Text><a href={event.url}>Click to View Website</a></Card.Text>
+                    <Card.Text>
+                      <a href={event.url} rel="noreferrer" target="_blank">Click to View Website</a>
+                    </Card.Text>
                     <Button onClick={() => this.props.onClick(event)}>Add to favorites</Button>
                   </Card.Footer>
                 )
