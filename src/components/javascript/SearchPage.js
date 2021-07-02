@@ -146,6 +146,7 @@ class SearchPage extends React.Component {
         <Jumbotron>
           <Breweries onClick={this.addBreweries}
             breweries = {this.state.breweries}
+            newBreweries = {this.state.newBreweries}
           />
           <Events onClick={this.addEvents}
             events = {this.state.events}

@@ -12,7 +12,7 @@ class LandingJumbo extends React.Component {
             <h2>Looking for a local brew?</h2>
             <h2>Or someplace to watch the game?</h2>
             <h2>Let us tell you</h2>
-            <h2>Where 2 Go Now</h2>
+            <h2 id="landingLogo">Where 2 Go Now</h2>
           </div>
           <Carousel 
             fade indicators="false"

@@ -15,7 +15,7 @@ img{
 .intro{
   color: rgb(24, 31, 31);
   background-color: rgba(255, 255, 255, 0.9);
-  font-family: 'Suez One', serif;
+  font-family: 'Manuale', sans-serif;
   width: 100%;
 }
 
@@ -34,4 +34,9 @@ img{
 .carousel-control-prev-icon {
   background-image: none!important;
 
+}
+
+#landingLogo {
+  color: rgb(255, 177, 9);
+  font-family: 'Suez One', serif;
 }
