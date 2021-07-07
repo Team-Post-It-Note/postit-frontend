@@ -3,7 +3,7 @@ import Breweries from './breweries/Breweries.js';
 import Events from './events/Events';
 import { Jumbotron } from 'react-bootstrap';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// since you have that import in index.js, it's not needed anywhere else
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {Card, Form, Button} from 'react-bootstrap';
@@ -19,10 +19,8 @@ class SearchPage extends React.Component {
     this.state = {
       breweries: [],
       events: [],
-      rests: [],
-      newEvents: [],
-      newBreweries:[],
-      newRests: [],
+      rests: []
+      // I don't think you're using any of these in your code.
     }
   }
 
@@ -90,36 +88,13 @@ class SearchPage extends React.Component {
   }
 
   // ----------------Add Happens Here--------------
-  
-  addEvents = async (event) => {
+
+  // this can be simplified to a single function that takes in the URL as a param as well
+  postThing = async (thing, url) => {
     let config = await this.getConfig();
-    const responseData = await axios.post(`${server}/tickets`, event, config);
-    let addedEvent = this.state.newEvents
-    addedEvent.push(responseData.data);
-    this.setState({ newEvents: addedEvent});
-    console.log(this.state.newEvents);
-  };
-
-  addBreweries = async (brewery) => {
-    let config = await this.getConfig();
-    const responseData = await axios.post(`${server}/breweries`, brewery, config);
-    let addedBrewery = this.state.newBreweries
-    addedBrewery.push(responseData.data);
-    this.setState({ newBreweries: addedBrewery});
-    console.log(this.state.newBreweries);
-  };
-
-  addRests = async (rest) => {
-    let config = await this.getConfig();
-    const responseData = await axios.post(`${server}/rests`, rest, config);
-    let addedRest = this.state.newRests
-    addedRest.push(responseData.data);
-    this.setState({ newRests: addedRest});
-    console.log(this.state.newRests);
-  };
-
-
-
+    await axios.post(`${server}${url}`, thing, config);
+    // no need to save the response data if we're not doing anything with it
+  }
 
   // -------------Render Stuff/ Pass Props----------
   
@@ -144,14 +119,14 @@ class SearchPage extends React.Component {
         {this.state.events[1] ?
 
         <Jumbotron>
-          <Breweries onClick={this.addBreweries}
+          <Breweries onClick={this.postThing}
             breweries = {this.state.breweries}
             newBreweries = {this.state.newBreweries}
           />
-          <Events onClick={this.addEvents}
+          <Events onClick={this.postThing}
             events = {this.state.events}
           />
-          <Restaurants onClick={this.addRests}
+          <Restaurants onClick={this.postThing}
             rests = {this.state.rests}/>
         </Jumbotron>
         : ''}

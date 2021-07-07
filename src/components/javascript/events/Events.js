@@ -31,7 +31,7 @@ class Events extends React.Component {
                     <Card.Text>
                       <a href={event.url} rel="noreferrer" target="_blank">Click to View Website</a>
                     </Card.Text>
-                    <Button onClick={() => this.props.onClick(event)}>Add to favorites</Button>
+                    <Button onClick={() => this.props.onClick(event, '/events')}>Add to favorites</Button>
                   </Card.Footer>
                 )
               })}

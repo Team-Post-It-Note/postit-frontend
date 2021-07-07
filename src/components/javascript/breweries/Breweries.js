@@ -35,7 +35,7 @@ class Breweries extends React.Component {
                         <a href={brewery.website_url} rel="noreferrer" target="_blank">Click to View Website</a>
                       </Card.Text>
                       <Card.Text>Phone: {brewery.phone}</Card.Text>
-                      <Button onClick={() => this.props.onClick(brewery)}>Add to favorites</Button>
+                      <Button onClick={() => this.props.onClick(brewery, '/breweries')}>Add to favorites</Button>
                     </Card.Footer>
                   )
                 })}
