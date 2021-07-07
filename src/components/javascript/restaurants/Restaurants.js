@@ -31,7 +31,7 @@ class Restaurants extends React.Component {
                       <a href={rest.url} rel="noreferrer" target="_blank">Click to View Website</a>
                     </Card.Text>
                     <Card.Text>Phone: {rest.phone}</Card.Text>
-                    <Button onClick={() => this.props.onClick(rest)}>Add to favorites</Button>
+                    <Button onClick={() => this.props.onClick(rest, '/rests')}>Add to favorites</Button>
                   </Card.Footer>
                 )
               })}

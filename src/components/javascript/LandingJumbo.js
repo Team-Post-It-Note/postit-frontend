@@ -20,34 +20,16 @@ class LandingJumbo extends React.Component {
             className="carousel"
           >
             {/* Will map carousel.item to show data */}
-            <Carousel.Item className="carouselItem">
+            {/* let's make this actually a map! */}
+            { ['brewery', 'football', 'cityscape', 'bakery'].map(place => (
+              <Carousel.Item className="carouselItem">
               <img
                 className="d-block w-65"
-                src="/images/jumboLanding/brewery.jpg"
-                alt='thing'
+                src={`/images/jumboLanding/${place}.jpg`}
+                alt={place}
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-65"
-                src="/images/jumboLanding/football.jpg"
-                alt='thing'
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-65"
-                src="/images/jumboLanding/cityscape.jpg"
-                alt='thing'
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-65"
-                src="/images/jumboLanding/bakery.jpg"
-                alt='thing'
-              />
-            </Carousel.Item>
+            ))}
           </Carousel>
         </Jumbotron>
       </>
